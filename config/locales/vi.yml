@@ -1,5 +1,11 @@
 vi:
-  sample: "Ứng Dụng Mẫu"
+  sample: "Ứng Dụng"
+  home: "Trang Chủ"
   about: "Thông Tin"
   help: "Giúp Đỡ"
   contact: "Liên Hệ"
+  signup: "Đăng Ký"
+  signup_now: "Đăng Ký ngay!"
+  login: "Đăng Nhập"
+  news: "Tin Tức"
+  welcome: "Chào mừng đến với Ứng Dụng"

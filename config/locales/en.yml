@@ -1,5 +1,11 @@
 en:
   sample: "Sample App"
+  home: "Home"
   about: "About"
   help: "Help"
   contact: "Contact"
+  signup: "Sign up"
+  signup_now: "Sign up now!"
+  login: "Log in"
+  news: "News"
+  welcome: "Welcome to the Sample App"
