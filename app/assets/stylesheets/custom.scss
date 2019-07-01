@@ -69,8 +69,9 @@ p {
 }
 
 footer {
+  clear: both;
   margin-top: 45px;
-  padding-top: 5px;
+  padding-top: 10px;
   border-top: 1px solid $gray-medium-light;
   color: $gray-light;
   a {
@@ -90,14 +91,6 @@ footer {
       margin-left: 15px;
     }
   }
-}
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
 }
 
 aside {
