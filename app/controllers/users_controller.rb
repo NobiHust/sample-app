@@ -11,8 +11,8 @@ class UsersController < ApplicationController
     @user = User.new user_params
 
     if @user.save
-      flash[:success] = t "welcome"
       log_in @user
+      flash[:success] = t "welcome"
       redirect_to @user
     else
       render :new
@@ -27,6 +27,6 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find_by(params[:id])
+    @user = User.find_by id: params[:id]
   end
 end
