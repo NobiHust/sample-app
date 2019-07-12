@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :find_user, only: [:show, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :logged_in_user, only: %i(index edit update destroy)
+  before_action :find_user, only: %i(show edit update destroy)
+  before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
   def index
@@ -40,9 +40,9 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t "user_deleted"
+      flash[:success] = t "deleted"
     else
-      flash[:danger] = t "cannot_delete"
+      flash[:danger] = t "cant_delete"
     end
     redirect_to users_url
   end
