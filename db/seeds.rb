@@ -1,12 +1,12 @@
 User.create! name: "Đỗ Hoàng Hiếu",
              email: "hieu@foo.bar",
-             password: "123456",
-             password_confirmation: "123456",
+             password: "hieu1234",
+             password_confirmation: "hieu1234",
              admin: true,
              activated: true,
              activated_at: Time.zone.now
 
-99.times do |n|
+50.times do |n|
   name = Faker::Games::LeagueOfLegends.champion
   email = "example-#{n+1}@railstutorial.org"
   password = "123456"
@@ -16,4 +16,10 @@ User.create! name: "Đỗ Hoàng Hiếu",
                password_confirmation: password,
                activated: true,
                activated_at: Time.zone.now
+end
+
+users = User.order(:created_at).take(6)
+30.times do
+  content = Faker::Sports::Football.team
+  users.each {|user| user.microposts.create!(content: content)}
 end

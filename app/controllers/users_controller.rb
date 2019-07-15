@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @users = User.page(params[:page]).per Settings.per_page
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.page(params[:page]).per Settings.mic_per_page
+  end
 
   def new
     @user = User.new
@@ -59,7 +61,7 @@ class UsersController < ApplicationController
 
     return @user if @user
     flash[:warning] = t "no_user"
-    redirect_to root_path
+    redirect_to root_url
   end
 
   def correct_user
